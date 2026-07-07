@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Trending</title>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg,#0B1120,#111827,#1E1B4B);
+            color: #F8FAFC;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #A855F7;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: rgba(30,41,59,.75);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border-bottom: 1px solid rgba(255,255,255,.1);
+            padding: 14px;
+            text-align: left;
+            color: #CBD5E1;
+        }
+
+        th {
+            background: rgba(124,58,237,.35);
+            color: white;
+        }
+
+        tr:hover {
+            background: rgba(168,85,247,.15);
+        }
+
+        a {
+            color: #A855F7;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🔥 YouTube Trending Videos</h1>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Link</th>
+    </tr>
+
+    {% for v in videos %}
+    <tr>
+        <td>{{ v.title }}</td>
+        <td>
+            <a href="{{ v.link }}" target="_blank">Watch</a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>

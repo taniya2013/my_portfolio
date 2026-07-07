@@ -1,0 +1,138 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#EEF7FF,#D9F4FF);
+    color:#333;
+    line-height:1.7;
+}
+
+/* Header */
+header{
+    background:linear-gradient(135deg,#4F46E5,#06B6D4);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:18px;
+    opacity:.95;
+}
+
+/* Sections */
+section{
+    width:85%;
+    max-width:1000px;
+    margin:35px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+section h2{
+    color:#4F46E5;
+    margin-bottom:18px;
+    border-left:6px solid #06B6D4;
+    padding-left:12px;
+}
+
+section p{
+    text-align:justify;
+}
+
+ul,
+ol{
+    margin-left:25px;
+}
+
+li{
+    margin:10px 0;
+}
+
+/* Table */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th{
+    background:#7C3AED;
+    color:white;
+    padding:14px;
+}
+
+table td{
+    padding:12px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+table tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+table tr:hover{
+    background:#E0F7FA;
+}
+
+/* Buttons */
+section:last-child{
+    text-align:center;
+}
+
+section:last-child a{
+    display:inline-block;
+    margin:10px;
+    padding:12px 28px;
+    text-decoration:none;
+    color:white;
+    background:#7C3AED;
+    border-radius:30px;
+    transition:.3s;
+    font-weight:600;
+}
+
+section:last-child a:hover{
+    background:#7C3AED;
+    transform:translateY(-3px);
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+header h1{
+    font-size:30px;
+}
+
+section{
+    width:92%;
+    padding:20px;
+}
+
+table{
+    font-size:14px;
+}
+
+section:last-child a{
+    display:block;
+    margin:12px auto;
+    width:220px;
+}
+
+}

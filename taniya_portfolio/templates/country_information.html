@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Country Information</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    padding:30px;
+    background:linear-gradient(135deg,#0B1120,#1E293B,#312E81);
+    background-size:300% 300%;
+    animation:gradientBG 10s ease infinite;
+    color:white;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:95%;
+    margin:auto;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:38px;
+    color:white;
+    text-shadow:0 0 15px rgba(168,85,247,.8);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+th{
+    background:#7C3AED;
+    color:white;
+    padding:15px;
+    text-align:left;
+    font-size:17px;
+}
+
+td{
+    padding:15px;
+    color:white;
+    background:rgba(255,255,255,.05);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    vertical-align:top;
+}
+
+tr:nth-child(even) td{
+    background:rgba(255,255,255,.08);
+}
+
+tr:hover td{
+    background:rgba(168,85,247,.15);
+    transition:.3s;
+}
+
+.cities{
+    max-width:600px;
+    white-space:normal;
+    line-height:1.7;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    .container{
+        width:100%;
+        padding:15px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    th,td{
+        padding:10px;
+        font-size:14px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>🌍 Countries and Cities</h2>
+
+<table>
+
+<tr>
+    <th>S.No</th>
+    <th>Country</th>
+    <th>ISO2</th>
+    <th>ISO3</th>
+    <th>Cities</th>
+</tr>
+
+{% for country in countries %}
+
+<tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ country.country }}</td>
+    <td>{{ country.iso2 }}</td>
+    <td>{{ country.iso3 }}</td>
+    <td class="cities">
+        {{ country.cities | join(", ") }}
+    </td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>

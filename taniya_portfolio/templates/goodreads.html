@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Goodreads Quotes</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
+    <style>
+        /* Table extra styling */
+        .table-container{
+            padding:50px 8%;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:rgba(30,41,59,.75);
+            backdrop-filter:blur(10px);
+            border-radius:15px;
+            overflow:hidden;
+        }
+
+        th, td{
+            padding:15px;
+            text-align:left;
+            border-bottom:1px solid rgba(255,255,255,.1);
+            color:#CBD5E1;
+            vertical-align:top;
+        }
+
+        th{
+            background:rgba(124,58,237,.3);
+            color:#fff;
+            font-size:16px;
+        }
+
+        tr:hover{
+            background:rgba(168,85,247,.15);
+        }
+
+        img{
+            width:60px;
+            height:60px;
+            border-radius:50%;
+            border:2px solid #8B5CF6;
+        }
+
+        .quote-text{
+            max-width:400px;
+        }
+
+        .author{
+            color:#A855F7;
+            font-weight:600;
+        }
+
+        .tags{
+            font-size:13px;
+            color:#94A3B8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2 class="logo">Goodreads Quotes</h2>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/goodreads">Refresh</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="table-container">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Quote</th>
+                <th>Author</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for q in quotes %}
+            <tr>
+                <td>
+                    {% if q.image_url %}
+                        <img src="{{ q.image_url }}" alt="author">
+                    {% endif %}
+                </td>
+
+                <td class="quote-text">
+                    {{ q.quote }}
+                </td>
+
+                <td class="author">
+                    {{ q.author }}
+                </td>
+
+                <td class="tags">
+                    {{ q.tags }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Dashboard | Taniya</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2 class="logo">Taniya</h2>
+
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('powerbi') }}">Power BI</a></li>
+            <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="projects">
+
+    <h2>🎓 University Dashboard</h2>
+
+    <div class="project">
+
+        <img src="{{ url_for('static', filename='images/Screenshot 2026-07-06 223545.png') }}"
+             alt="University Dashboard"
+             style="width:100%; border-radius:12px; margin-bottom:20px;">
+
+        <h3>Project Overview</h3>
+
+        <p>
+            This interactive Power BI dashboard provides insights into
+            university student performance, academic results and departmental
+            analysis. It helps users monitor student records through KPIs,
+            charts and filters.
+        </p>
+
+       <h3>Dashboard Features</h3>
+
+<ul style="text-align:left; margin-left:25px; line-height:2;">
+    <li>📊 Count of Department by Student Name</li>
+    <li>🎯 Total Pass and Expected Pass by Subject</li>
+    <li>📈 Count of Student ID by Year</li>
+    <li>🍩 Count of City by State</li>
+    <li>📉 Count of Grade by Semester</li>
+    <li>👨‍🎓 Count of Gender by Year and City</li>
+    <li>🏫 Count of Student ID by Department</li>
+</ul>
+        <br>
+
+        <a href="{{ url_for('powerbi') }}">
+            <button>← Back</button>
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Taniya | Power BI Portfolio</p>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>News Scraper</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            padding:30px;
+            background:linear-gradient(135deg,#0B1120,#1E293B,#312E81);
+            background-size:300% 300%;
+            animation:gradientBG 10s ease infinite;
+            color:white;
+        }
+
+        @keyframes gradientBG{
+            0%{background-position:0% 50%;}
+            50%{background-position:100% 50%;}
+            100%{background-position:0% 50%;}
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:30px;
+            font-size:40px;
+            color:white;
+            text-shadow:0 0 15px rgba(168,85,247,.8);
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:rgba(255,255,255,.08);
+            backdrop-filter:blur(12px);
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 8px 25px rgba(0,0,0,.35);
+        }
+
+        th{
+            background:#7C3AED;
+            color:white;
+            padding:16px;
+            text-align:left;
+            font-size:18px;
+        }
+
+        td{
+            padding:16px;
+            color:white;
+            border-bottom:1px solid rgba(255,255,255,.08);
+        }
+
+        tr:nth-child(even){
+            background:rgba(255,255,255,.05);
+        }
+
+        tr:hover{
+            background:rgba(168,85,247,.15);
+            transition:.3s;
+        }
+
+        a{
+            text-decoration:none;
+        }
+
+        button{
+            background:#A855F7;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:25px;
+            cursor:pointer;
+            transition:.3s;
+            font-size:15px;
+        }
+
+        button:hover{
+            background:#9333EA;
+            transform:translateY(-2px);
+            box-shadow:0 0 15px rgba(168,85,247,.6);
+        }
+
+        @media(max-width:768px){
+
+            body{
+                padding:15px;
+            }
+
+            h1{
+                font-size:30px;
+            }
+
+            table{
+                font-size:14px;
+            }
+
+            th,td{
+                padding:10px;
+            }
+
+            button{
+                padding:8px 15px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>📰 Latest News</h1>
+
+    <table>
+
+        <tr>
+            <th>Headline</th>
+            <th>Open</th>
+        </tr>
+
+        {% for i in data %}
+
+        <tr>
+
+            <td>{{ i.headline }}</td>
+
+            <td>
+                <a href="{{ i.url }}" target="_blank">
+                    <button>Read News</button>
+                </a>
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html>

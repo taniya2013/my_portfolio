@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Taniya | Portfolio</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2 class="logo">Taniya</h2>
+
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="left">
+
+            <h3>Hello, I'm</h3>
+            <h1>Taniya</h1>
+            <h2>AIML Student & Python Developer</h2>
+
+            <p>
+                Passionate about Artificial Intelligence, Machine Learning, Python Development,
+                Web Scraping, Data Science and Flask Projects.
+            </p>
+
+            <a href="/portfolio">
+                <button class="portfolio-btn">My Portfolio</button>
+            </a>
+
+            <div class="buttons">
+                <a href="#" download>
+                    <button>Download Resume</button>
+                </a>
+
+                <a href="/learnmore">
+                    <button>Learn More</button>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="right">
+            <img src="{{ url_for('static', filename='images/taniya.jpg.jpeg') }}" alt="Taniya">
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a second year AIML Engineering student. I love creating Machine Learning and Python projects.
+            Currently working on Flask applications and Data Science projects.
+        </p>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+        <h2>My Skills</h2>
+
+        <div class="cards">
+            <div class="card">Python</div>
+            <div class="card">Flask</div>
+            <div class="card">HTML</div>
+            <div class="card">CSS</div>
+            <div class="card">Machine Learning</div>
+            <div class="card">Web Scraping</div>
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>🎵 Spotify Scraper</h3>
+            <p>Extract playlist information.</p>
+            <a href="/spotify">
+                <button>View Project</button>
+            </a>
+        </div>
+
+        <div class="project">
+            <h3>💻 Amazon Web Scraper</h3>
+            <p>Extracted product details using BeautifulSoup.</p>
+            <a href="/amazon">
+                <button>View Project</button>
+            </a>
+        </div>
+
+        <div class="project">
+            <h3>📚 Goodreads Scraper</h3>
+            <p>Scrape quotes, authors, images and tags using BeautifulSoup.</p>
+            <a href="/goodreads">
+                <button>View Project</button>
+            </a>
+        </div>
+
+        <div class="project">
+            <h3>🌐 Portfolio Website</h3>
+            <p>Personal responsive portfolio using Flask.</p>
+            <a href="/portfolio">
+                <button>View Project</button>
+            </a>
+        </div>
+
+    </section>
+
+
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+
+    <p>Let’s connect with me 👇</p>
+    <div class="contact-info">
+        <p>Email: <a href="mailto:tt835554@gmail.com">tt835554@gmail.com</a></p>
+
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/taniya-t-6875aa338" target="_blank">
+            LinkedIn Profile
+        </a></p>
+
+        <p>GitHub: <a href="https://github.com/taniya2013" target="_blank">
+            GitHub Profile
+        </a></p>
+    </div>
+</div>
+
+</section>
+
+    <footer>
+        <p>© 2026 Taniya | AIML Portfolio</p>
+    </footer>
+
+</body>
+
+</html>

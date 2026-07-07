@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard | Taniya</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2 class="logo">Taniya</h2>
+
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('powerbi') }}">Power BI</a></li>
+            <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="projects">
+
+    <h2>📈 Sales Dashboard</h2>
+
+    <div class="project">
+
+        <img src="{{ url_for('static', filename='images/Screenshot 2026-07-06 224202.png') }}"
+             alt="Sales Dashboard"
+             style="width:100%; border-radius:12px; margin-bottom:20px;">
+
+        <h3>Project Overview</h3>
+
+        <p>
+            This Power BI Sales Dashboard analyzes product sales, selling price,
+            product cost, expected profit and state-wise performance using
+            interactive charts and KPIs.
+        </p>
+
+        <h3>Dashboard Features</h3>
+
+        <ul style="text-align:left; margin-left:25px; line-height:2;">
+            <li> Sum of Selling Price by Product</li>
+            <li> Count of Product ID by Product State</li>
+            <li> Count of Product by Selling Price</li>
+            <li> Expected Profit by Order Date</li>
+        </ul>
+        <br>
+
+<a href="{{ url_for('powerbi') }}">
+    <button>← Back to Power BI</button>
+</a>

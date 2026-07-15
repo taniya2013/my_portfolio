@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Taniya | Portfolio</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2 class="logo">Taniya</h2>
+
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="#about">About</a></li>
+               <li><a href="#skills">Skills</a></li>
+                <li><a href="{{ url_for('internship') }}">Internship</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+   <section class="hero">
+
+    <div class="left">
+
+        <span class="tag">AI & ML Intern</span>
+
+        <div class="hero-badge">
+            <span> AI & ML Enthusiast</span>
+        </div>
+
+        <h1>Taniya</h1>
+
+        <h2>Python Developer | AI & ML Student</h2>
+
+        <p>
+            Passionate about Artificial Intelligence, Machine Learning,
+            Python Development, Web Scraping, Data Science and Flask Projects.
+        </p>
+
+        <div class="experience-card">
+            <a href="{{ url_for('internship') }}" class="exp-btn">
+                Explore Experience →
+            </a>
+        </div>
+
+        <div class="buttons">
+
+           <a href="#" download class="portfolio-btn">
+    Download Resume
+</a>
+
+<a href="/learnmore" class="portfolio-btn">
+    Explore Projects
+</a>
+
+        </div>
+
+        <!-- Stats -->
+        <div class="hero-stats">
+
+            <div class="stat-card">
+                <h3>15+</h3>
+                <p>Projects</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>10+</h3>
+                <p>Technologies</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>1</h3>
+                <p>Internship</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="right">
+        <img src="{{ url_for('static', filename='images/taniya.jpg.jpeg') }}" alt="Taniya">
+    </div>
+
+</section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a second year AIML Engineering student. I love creating Machine Learning and Python projects.
+            Currently working on Flask applications and Data Science projects.
+        </p>
+    </section>
+
+
+    <!-- SKILLS -->
+  <section class="skills" id="skills">
+
+    <h2>💜 My Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <div class="icon">🐍</div>
+            <h3>Python</h3>
+        </div>
+
+        <div class="skill-card">
+            <div class="icon">⚡</div>
+            <h3>Flask</h3>
+        </div>
+
+        <div class="skill-card">
+            <div class="icon">🌐</div>
+            <h3>HTML</h3>
+        </div>
+
+        <div class="skill-card">
+            <div class="icon">🎨</div>
+            <h3>CSS</h3>
+        </div>
+
+        <div class="skill-card">
+            <div class="icon">🤖</div>
+            <h3>Machine Learning</h3>
+        </div>
+
+        <div class="skill-card">
+            <div class="icon">🕸️</div>
+            <h3>Web Scraping</h3>
+        </div>
+
+        <div class="skill-card">
+            <div class="icon">📊</div>
+            <h3>Power BI</h3>
+        </div>
+
+        <div class="skill-card">
+            <div class="icon">🗄️</div>
+            <h3>SQL</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+    
+   
+
+
+  <section class="contact" id="contact">
+
+    <h2>Get In Touch</h2>
+    <p>Feel free to connect with me through any platform.</p>
+
+    <div class="contact-container">
+
+        <a href="mailto:Taniyaa0220@gmail.com" class="contact-card">
+            📧
+            <span>Email Me</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/taniya-t-6875aa338"
+           target="_blank"
+           class="contact-card">
+            💼
+            <span>LinkedIn</span>
+        </a>
+
+        <a href="https://github.com/taniya2013"
+           target="_blank"
+           class="contact-card">
+            💻
+            <span>GitHub</span>
+        </a>
+
+    </div>
+
+</section>
+
+    <footer>
+        <p>© 2026 Taniya | AIML Portfolio</p>
+    </footer>
+
+</body>
+
+</html>

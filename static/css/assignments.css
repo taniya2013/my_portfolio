@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0B1120,#111827,#1E1B4B);
+    color:#fff;
+    min-height:100vh;
+    padding:50px 20px;
+}
+
+h1{
+    text-align:center;
+    font-size:40px;
+    color:#A855F7;
+    margin-bottom:40px;
+}
+
+/* File Cards */
+
+.file-card{
+    width:85%;
+    max-width:700px;
+    margin:20px auto;
+    background:#1E293B;
+    border:1px solid rgba(168,85,247,.3);
+    border-radius:15px;
+    padding:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+.file-card:hover{
+    transform:translateY(-5px);
+    border-color:#A855F7;
+    box-shadow:0 12px 25px rgba(168,85,247,.35);
+}
+
+.file-card h3{
+    font-size:22px;
+    color:#fff;
+}
+
+.file-card a{
+    text-decoration:none;
+    background:linear-gradient(90deg,#A855F7,#3B82F6);
+    color:#fff;
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.file-card a:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px rgba(168,85,247,.5);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.file-card{
+    flex-direction:column;
+    text-align:center;
+    gap:20px;
+}
+
+h1{
+    font-size:30px;
+}
+
+.file-card h3{
+    font-size:20px;
+}
+
+}
